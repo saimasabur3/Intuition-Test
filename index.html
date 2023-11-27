@@ -1,0 +1,243 @@
+<!DOCTYPE html> <html><head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+       <title>Intuition Test</title>
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js "></script>
+    <style>html {
+  height: 100%;
+  width: 100%;
+}
+/*  img {
+  display: none; 
+}*/
+
+body {
+    color: ivory;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  background-color: darkred;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+    padding: 0 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+.face {
+    height: 350px;
+}
+.duck{
+  height: 350px;
+}
+.facepillars{
+  height: 350px;
+}
+.yes-button {
+    height: 40px;
+}
+
+
+.duckrabbit {
+    font-family: 'Coiny', cursive;
+}
+
+
+.pillars {
+    font-family: 'Coiny', cursive;
+}
+
+.young {
+    font-family: 'Coiny', cursive;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+}
+.face-button {
+    height: 40px;
+}
+.girl-button {
+    height: 40px;
+}
+.bunny-button {
+    height: 40px;
+}
+.duck-button {
+    height: 40px;
+}
+.faces-button {
+    height: 40px;
+}
+.pillars-button {
+    height: 40px;
+}
+.young-button {
+    height: 40px;
+}
+.old-button {
+    height: 40px;
+}</style></head>
+    <body>
+
+      <script src="script.js"></script>
+        <div class="title">Intuition Test </div>
+      <p>This test will test your intuition by showing you images. Choose which image you see first!</p>
+        
+        
+        
+       <div class="first">
+      <img class="face" src="https://www.boredart.com/wp-content/uploads/2014/12/optical-illusion-face-peering-at-you.jpg">
+        <div>     
+            <button class="face-button">A face</button>
+        </div>
+            <button class="girl-button">A young girl walking</button>
+        <p class="face-reply"> If you chose face...</p>
+        <p class="girl-reply"> Double click if you chose the girl walking...</p>
+        </div>
+
+      
+        
+           
+       <img class="duck" src="https://www.artofplay.com/cdn/shop/articles/duck-rabbit.jpg?crop=center&amp;height=1200&amp;v=1473375955&amp;width=1200">
+       <div>
+            <button class="bunny-button">A bunny</button>
+       </div>
+            <button class="duck-button">A duck</button>
+        <p class="bunny-reply"> If you chose the bunny...</p>
+        <p class="duck-reply"> Double click if you chose the duck...</p>
+
+
+      
+        
+            
+       <img class="facepillars" src="https://d.ibtimes.co.uk/en/full/1426245/rubins-vase.jpg">
+        <div>
+            <button class="faces-button">Two faces</button>
+        </div>
+            <button class="pillars-button">A pillar</button>
+         <p class="faces-reply"> If you chose the two faces...</p>
+         <p class="pillars-reply"> Double click if you chose the pillar...</p>
+
+        
+        
+
+            
+            <img class="youngwoman" src="https://img.ibxk.com.br/2015/03/06/06130509988617.jpg?w=1040">
+        
+        <div>
+            <button class="young-button">A young woman</button>
+        </div>
+            <button class="old-button">An older woman</button>
+         <p class="young-reply"> If you chose the younger woman...</p>
+         <p class="old-reply"> Double click if you chose the older woman...</p>
+
+       
+        <div>     
+            <button class="restart-button">Restart</button>
+        </div>
+    
+<script>
+/*__POPCODESTART__*/
+$(".face-button").click(function () {
+  $(".face-reply").text("you tend to be more more impulsive, spontaneous, and are less likely to take things seriously.");
+  $(".face-reply").css("background-color", "olive");
+  $(".girl-reply").hide();
+});
+$(".girl-button").dblclick(function () {
+  $(".girl-reply").show();
+  $(".girl-reply").text("you are indecisive and are afraid to take risks.");
+  $(".girl-reply").css("background-color", "darkblue");
+  $(".face-reply").hide();
+});
+$(".bunny-button").click(function () {
+  $(".bunny-reply").text("you are more likely to be more likely to be vulnerable and sensitive.");
+  $(".bunny-reply").css("background-color", "olive");
+  $(".duck-reply").hide();
+  $(".girl-reply").hide();
+  $(".face-reply").hide();
+  $(".face-button").hide();
+  $(".girl-reply").hide();
+  $(".girl-button").hide();
+});
+$(".duck-button").dblclick(function () {
+  $(".duck-reply").show();
+  $(".duck-reply").text("you tend to build walls around you emotions and don’t give in so easily.");
+  $(".duck-reply").css("background-color", "darkblue");
+  $(".bunny-reply").hide();
+  $(".face-reply").hide();
+  $(".face-button").hide();
+  $(".girl-reply").hide();
+  $(".girl-button").hide();
+});
+$(".faces-button").click(function () {
+  $(".faces-reply").text("you are a more extroverted and outgoing person.");
+  $(".faces-reply").css("background-color", "olive");
+  $(".pillars-reply").hide();
+  $(".duck-reply").hide();
+  $(".duck-button").hide();
+  $(".bunny-reply").hide();
+  $(".bunny-button").hide();
+});
+$(".pillars-button").dblclick(function () {
+  $(".pillars-reply").show();
+  $(".pillars-reply").text("you are more introverted and tend to be a bit more shy.");
+  $(".pillars-reply").css("background-color", "darkblue");
+  $(".faces-reply").hide();
+  $(".duck-reply").hide();
+  $(".duck-button").hide();
+  $(".bunny-reply").hide();
+  $(".bunny-button").hide();
+});
+$(".young-button").click(function () {
+  $(".young-reply").text("you are scared to grow older and afraid of change disrupting your life.");
+  $(".young-reply").css("background-color", "olive");
+  $(".old-reply").hide();
+  $(".faces-reply").hide();
+  $(".faces-button").hide();
+  $(".pillars-reply").hide();
+  $(".pillars-button").hide();
+});
+$(".old-button").dblclick(function () {
+  $(".old-reply").show();
+  $(".old-reply").text("you are accepting of change and have an easier time when faced with problems.");
+  $(".old-reply").css("background-color", "darkblue");
+  $(".young-reply").hide();
+  $(".faces-reply").hide();
+  $(".faces-button").hide();
+  $(".pillars-reply").hide();
+  $(".pillars-button").hide();
+});
+$(".restart-button").click(function () {
+  $(".face-reply").show();
+  $(".girl-reply").show();
+  $(".bunny-reply").show();
+  $(".duck-reply").show();
+  $(".faces-reply").show();
+  $(".pillars-reply").show();
+  $(".young-reply").show();
+  $(".old-reply").show();
+  $(".face-button").show();
+  $(".girl-button").show();
+  $(".bunny-button").show();
+  $(".duck-button").show();
+  $(".faces-button").show();
+  $(".pillars-button").show();
+  $(".young-button").show();
+  $(".old-button").show();
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIiQiLCJjbGljayIsInRleHQiLCJjc3MiLCJoaWRlIiwiZGJsY2xpY2siLCJzaG93Il0sIm1hcHBpbmdzIjoiQUFBQUEsQ0FBQyxDQUFDLGNBQUQsQ0FBRCxDQUFrQkMsS0FBbEIsQ0FBd0IsWUFBVztBQUNsQ0QsRUFBQUEsQ0FBQyxDQUFDLGFBQUQsQ0FBRCxDQUFpQkUsSUFBakIsQ0FBc0IsZ0dBQXRCO0FBQ0lGLEVBQUFBLENBQUMsQ0FBQyxhQUFELENBQUQsQ0FBaUJHLEdBQWpCLENBQXFCLGtCQUFyQixFQUF5QyxPQUF6QztBQUNESCxFQUFBQSxDQUFDLENBQUMsYUFBRCxDQUFELENBQWlCSSxJQUFqQjtBQUNILENBSkQ7QUFNQUosQ0FBQyxDQUFDLGNBQUQsQ0FBRCxDQUFrQkssUUFBbEIsQ0FBMkIsWUFBVztBQUNsQ0wsRUFBQUEsQ0FBQyxDQUFDLGFBQUQsQ0FBRCxDQUFpQk0sSUFBakI7QUFDSE4sRUFBQUEsQ0FBQyxDQUFDLGFBQUQsQ0FBRCxDQUFpQkUsSUFBakIsQ0FBc0Isa0RBQXRCO0FBQ0dGLEVBQUFBLENBQUMsQ0FBQyxhQUFELENBQUQsQ0FBaUJHLEdBQWpCLENBQXFCLGtCQUFyQixFQUF5QyxVQUF6QztBQUNBSCxFQUFBQSxDQUFDLENBQUMsYUFBRCxDQUFELENBQWlCSSxJQUFqQjtBQUVILENBTkQ7QUFRQUosQ0FBQyxDQUFDLGVBQUQsQ0FBRCxDQUFtQkMsS0FBbkIsQ0FBeUIsWUFBVztBQUNuQ0QsRUFBQUEsQ0FBQyxDQUFDLGNBQUQsQ0FBRCxDQUFrQkUsSUFBbEIsQ0FBdUIsdUVBQXZCO0FBQ0dGLEVBQUFBLENBQUMsQ0FBQyxjQUFELENBQUQsQ0FBa0JHLEdBQWxCLENBQXNCLGtCQUF0QixFQUEwQyxPQUExQztBQUNBSCxFQUFBQSxDQUFDLENBQUMsYUFBRCxDQUFELENBQWlCSSxJQUFqQjtBQUNBSixFQUFBQSxDQUFDLENBQUMsYUFBRCxDQUFELENBQWlCSSxJQUFqQjtB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QyxnQkFBRCxDQUFELENBQW9CTSxJQUFwQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsY0FBRCxDQUFELENBQWtCTSxJQUFsQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsWUFBRCxDQUFELENBQWdCTSxJQUFoQjtBQUVBTixFQUFBQSxDQUFDLENBQUMsY0FBRCxDQUFELENBQWtCTSxJQUFsQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsY0FBRCxDQUFELENBQWtCTSxJQUFsQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsZUFBRCxDQUFELENBQW1CTSxJQUFuQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsY0FBRCxDQUFELENBQWtCTSxJQUFsQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsZUFBRCxDQUFELENBQW1CTSxJQUFuQjtBQUNBTixFQUFBQSxDQUFDLENBQUMsaUJBQUQsQ0FBRCxDQUFxQk0sSUFBckI7QUFDQU4sRUFBQUEsQ0FBQyxDQUFDLGVBQUQsQ0FBRCxDQUFtQk0sSUFBbkI7QUFDQU4sRUFBQUEsQ0FBQyxDQUFDLGFBQUQsQ0FBRCxDQUFpQk0sSUFBakI7QUFDSixDQWxCRCIsInNvdXJjZXNDb250ZW50IjpbIiQoXCIuZmFjZS1idXR0b25cIikuY2xpY2soZnVuY3Rpb24oKSB7XG5cdCQoXCIuZmFjZS1yZXBseVwiKS50ZXh0KFwieW91IHRlbmQgdG8gYmUgbW9yZSBtb3JlIGltcHVsc2l2ZSwgc3BvbnRhbmVvdXMsIGFuZCBhcmUgbGVzcyBsaWtlbHkgdG8gdGFrZSB0aGluZ3Mgc2VyaW91c2x5LlwiKTsgXG4gICAgICQoXCIuZmFjZS1yZXBseVwiKS5jc3MoXCJiYWNrZ3JvdW5kLWNvbG9yXCIsIFwib2xpdmVcIik7XG4gICAgJChcIi5naXJsLXJlcGx5XCIpLmhpZGUoKTtcbn0pO1xuXG4kKFwiLmdpcmwtYnV0dG9uXCIpLmRibGNsaWNrKGZ1bmN0aW9uKCkge1xuICAgICQoXCIuZ2lybC1yZXBseVwiKS5zaG93KCk7XG5cdCQoXCIuZ2lybC1yZXBseVwiKS50ZXh0KFwieW91IGFyZSBpbmRlY2lzaXZlIGFuZCBhcmUgYWZyYWlkIHRvIHRha2Ugcmlza3MuXCIpO1xuICAgICQoXCIuZ2lybC1yZXBseVwiKS5jc3MoXCJiYWNrZ3JvdW5kLWNvbG9yXCIsIFwiZGFya2JsdWVcIik7XG4gICAgJChcIi5mYWNlLXJlcGx5XCIpLmhpZGUoKTtcbiAgIFxufSk7XG5cbiQoXCIuYnVubnktYnV0dG9uXCIpLmNsaWNrKGZ1bmN0aW9uKCkge1xuXHQkKFwiLmJ1bm55LXJlcGx5XCIpLnRleHQoXCJ5b3UgYXJlIG1vcmUgbGlrZWx5IHRvIGJlIG1vcmUgbGlrZWx5IHRvIGJlIHZ1bG5lcmFibGUgYW5kIHNlbnNpdGl2ZS5cIik7IFxuICAgICQoXCIuYnVubnktcmVwbHlcIikuY3NzKFwiYmFja2dyb3VuZC1jb2xvclwiLCBcIm9saXZlXCIpO1xuICAgICQoXCIuZHVjay1yZXBseVwiKS5oaWRlKCk7XG4gICAgJChcIi5naXJsLXJlcGx5XCIpLmhpZGUoKTtcbiAgICAkKFwiLmZhY2UtcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIuZmFjZS1idXR0b25cIikuaGlkZSgpO1xuICAgICAkKFwiLmdpcmwtcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIuZ2lybC1idXR0b25cIikuaGlkZSgpO1xufSk7XG5cdCQoXCIuZHVjay1idXR0b25cIikuZGJsY2xpY2soZnVuY3Rpb24oKSB7XG4gICAgICAgICAkKFwiLmR1Y2stcmVwbHlcIikuc2hvdygpO1xuXHQkKFwiLmR1Y2stcmVwbHlcIikudGV4dChcInlvdSB0ZW5kIHRvIGJ1aWxkIHdhbGxzIGFyb3VuZCB5b3UgZW1vdGlvbnMgYW5kIGRvbuKAmXQgZ2l2ZSBpbiBzbyBlYXNpbHkuXCIpO1xuICAgICQoXCIuZHVjay1yZXBseVwiKS5jc3MoXCJiYWNrZ3JvdW5kLWNvbG9yXCIsIFwiZGFya2JsdWVcIik7XG4gICAgICAgICQoXCIuYnVubnktcmVwbHlcIikuaGlkZSgpO1xuICAgICAgICAgJChcIi5mYWNlLXJlcGx5XCIpLmhpZGUoKTtcbiAgICAkKFwiLmZhY2UtYnV0dG9uXCIpLmhpZGUoKTtcbiAgICAgJChcIi5naXJsLXJlcGx5XCIpLmhpZGUoKTtcbiAgICAkKFwiLmdpcmwtYnV0dG9uXCIpLmhpZGUoKTtcbn0pO1xuXG4kKFwiLmZhY2VzLWJ1dHRvblwiKS5jbGljayhmdW5jdGlvbigpIHtcblx0JChcIi5mYWNlcy1yZXBseVwiKS50ZXh0KFwieW91IGFyZSBhIG1vcmUgZXh0cm92ZXJ0ZWQgYW5kIG91dGdvaW5nIHBlcnNvbi5cIik7IFxuICAgICQoXCIuZmFjZXMtcmVwbHlcIikuY3NzKFwiYmFja2dyb3VuZC1jb2xvclwiLCBcIm9saXZlXCIpO1xuICAgICQoXCIucGlsbGFycy1yZXBseVwiKS5oaWRlKCk7XG4gICAgICQoXCIuZHVjay1yZXBseVwiKS5oaWRlKCk7XG4gICAgJChcIi5kdWNrLWJ1dHRvblwiKS5oaWRlKCk7XG4gICAgICQoXCIuYnVubnktcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIuYnVubnktYnV0dG9uXCIpLmhpZGUoKTtcbn0pO1xuXHQkKFwiLnBpbGxhcnMtYnV0dG9uXCIpLmRibGNsaWNrKGZ1bmN0aW9uKCkge1xuICAgICAgICAgJChcIi5waWxsYXJzLXJlcGx5XCIpLnNob3coKTtcblx0JChcIi5waWxsYXJzLXJlcGx5XCIpLnRleHQoXCJ5b3UgYXJlIG1vcmUgaW50cm92ZXJ0ZWQgYW5kIHRlbmQgdG8gYmUgYSBiaXQgbW9yZSBzaHkuXCIpO1xuICAgICAgICAkKFwiLnBpbGxhcnMtcmVwbHlcIikuY3NzKFwiYmFja2dyb3VuZC1jb2xvclwiLCBcImRhcmtibHVlXCIpO1xuICAgICAgICAkKFwiLmZhY2VzLXJlcGx5XCIpLmhpZGUoKTtcbiAgICAgICAgICQoXCIuZHVjay1yZXBseVwiKS5oaWRlKCk7XG4gICAgJChcIi5kdWNrLWJ1dHRvblwiKS5oaWRlKCk7XG4gICAgICQoXCIuYnVubnktcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIuYnVubnktYnV0dG9uXCIpLmhpZGUoKTtcbn0pO1xuXG4kKFwiLnlvdW5nLWJ1dHRvblwiKS5jbGljayhmdW5jdGlvbigpIHtcblx0JChcIi55b3VuZy1yZXBseVwiKS50ZXh0KFwieW91IGFyZSBzY2FyZWQgdG8gZ3JvdyBvbGRlciBhbmQgYWZyYWlkIG9mIGNoYW5nZSBkaXNydXB0aW5nIHlvdXIgbGlmZS5cIik7IFxuICAgICQoXCIueW91bmctcmVwbHlcIikuY3NzKFwiYmFja2dyb3VuZC1jb2xvclwiLCBcIm9saXZlXCIpO1xuICAgICQoXCIub2xkLXJlcGx5XCIpLmhpZGUoKTtcbiAgICAgJChcIi5mYWNlcy1yZXBseVwiKS5oaWRlKCk7XG4gICAgJChcIi5mYWNlcy1idXR0b25cIikuaGlkZSgpO1xuICAgICAkKFwiLnBpbGxhcnMtcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIucGlsbGFycy1idXR0b25cIikuaGlkZSgpO1xufSk7XG5cdCQoXCIub2xkLWJ1dHRvblwiKS5kYmxjbGljayhmdW5jdGlvbigpIHtcbiAgICAgICAgICQoXCIub2xkLXJlcGx5XCIpLnNob3coKTtcblx0JChcIi5vbGQtcmVwbHlcIikudGV4dChcInlvdSBhcmUgYWNjZXB0aW5nIG9mIGNoYW5nZSBhbmQgaGF2ZSBhbiBlYXNpZXIgdGltZSB3aGVuIGZhY2VkIHdpdGggcHJvYmxlbXMuXCIpO1xuICAgICAgICAkKFwiLm9sZC1yZXBseVwiKS5jc3MoXCJiYWNrZ3JvdW5kLWNvbG9yXCIsIFwiZGFya2JsdWVcIik7XG4gICAgICAgICQoXCIueW91bmctcmVwbHlcIikuaGlkZSgpO1xuICAgICAgICAgJChcIi5mYWNlcy1yZXBseVwiKS5oaWRlKCk7XG4gICAgJChcIi5mYWNlcy1idXR0b25cIikuaGlkZSgpO1xuICAgICAkKFwiLnBpbGxhcnMtcmVwbHlcIikuaGlkZSgpO1xuICAgICQoXCIucGlsbGFycy1idXR0b25cIikuaGlkZSgpO1xufSk7XG4kKFwiLnJlc3RhcnQtYnV0dG9uXCIpLmNsaWNrKGZ1bmN0aW9uKCkge1xuICAgICAkKFwiLmZhY2UtcmVwbHlcIikuc2hvdygpO1xuICAgICAkKFwiLmdpcmwtcmVwbHlcIikuc2hvdygpO1xuICAgICAkKFwiLmJ1bm55LXJlcGx5XCIpLnNob3coKTtcbiAgICAgJChcIi5kdWNrLXJlcGx5XCIpLnNob3coKTtcbiAgICAgJChcIi5mYWNlcy1yZXBseVwiKS5zaG93KCk7XG4gICAgICQoXCIucGlsbGFycy1yZXBseVwiKS5zaG93KCk7XG4gICAgICQoXCIueW91bmctcmVwbHlcIikuc2hvdygpO1xuICAgICAkKFwiLm9sZC1yZXBseVwiKS5zaG93KCk7XG4gICAgXG4gICAgICQoXCIuZmFjZS1idXR0b25cIikuc2hvdygpO1xuICAgICAkKFwiLmdpcmwtYnV0dG9uXCIpLnNob3coKTtcbiAgICAgJChcIi5idW5ueS1idXR0b25cIikuc2hvdygpO1xuICAgICAkKFwiLmR1Y2stYnV0dG9uXCIpLnNob3coKTtcbiAgICAgJChcIi5mYWNlcy1idXR0b25cIikuc2hvdygpO1xuICAgICAkKFwiLnBpbGxhcnMtYnV0dG9uXCIpLnNob3coKTtcbiAgICAgJChcIi55b3VuZy1idXR0b25cIikuc2hvdygpO1xuICAgICAkKFwiLm9sZC1idXR0b25cIikuc2hvdygpO1xufSk7XG5cblxuIl19</script></body></html>
